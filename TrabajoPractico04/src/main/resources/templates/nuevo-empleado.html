@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h3>FORMULARIO DE ALTA DE EMPLEADO</h3>
+	<form action="/empleado/guardar" th:object="${empleado}" method="post">
+		<label for="txtlegajo">Legajo</label>
+		<input id="txtlegajo" type="number" th:field="*{legajo}">
+		<br/>
+		<label for="txtapellido">Apellido</label>
+		<input id="txtapellido" type="text" th:field="*{apellido}" placeholder="Ingrese Apelido...">
+		<br/>
+		<label>Nombres</label>
+		<input type="text" th:field="*{nombres}" placeholder="Ingrese Nombres">
+		<br/>
+		<label>Sueldo</label>
+		<input type="text" th:field="*{sueldo}">
+		<br/>
+		<input type="submit" value="Enviar">
+	</form>
+	
+</body>
+</html>
